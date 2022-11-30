@@ -10,7 +10,6 @@ function Home() {
 
   return (
     <>
-      <div>baby melie</div>
       {document && (
         <div>
           <PrismicRichText field={document.data.title} />
