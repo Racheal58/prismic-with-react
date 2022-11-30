@@ -1,15 +1,19 @@
 import React from "react";
 
-import { PrismicRichText, useFirstPrismicDocument } from "@prismicio/react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Post from "./Post";
+import Home from "./Home";
 
 function App() {
-  const [document] = useFirstPrismicDocument();
-  console.log("dfd",document)
-
   return (
-    <div>
-      {document && <PrismicRichText field={document.data.example_rich_text} />}
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/post" element={<Post />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

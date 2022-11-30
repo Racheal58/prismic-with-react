@@ -15,8 +15,12 @@ export const client = prismic.createClient(repositoryName, {
   // to an empty array or remove the option entirely.
   routes: [
     {
-      type: "post",
+      type: "home_page",
       path: "/",
+    },
+    {
+      type: "post",
+      path: "/:uid",
     },
   ],
 });

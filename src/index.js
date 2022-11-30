@@ -3,14 +3,15 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { PrismicProvider } from "@prismicio/react";
-import { client } from "./prismic";
+import { PrismicProvider, PrismicToolbar } from "@prismicio/react";
+import { client, repositoryName } from "./prismic";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <PrismicProvider client={client}>
       <App />
+      <PrismicToolbar repositoryName={repositoryName} />
     </PrismicProvider>
   </React.StrictMode>
 );
