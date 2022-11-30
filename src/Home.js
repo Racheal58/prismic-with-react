@@ -4,9 +4,6 @@ import { PrismicRichText, useSinglePrismicDocument } from "@prismicio/react";
 
 function Home() {
   const [document] = useSinglePrismicDocument("home_page");
-  console.log("dfd68", document);
-
-  // console.log("here", document)
 
   return (
     <>

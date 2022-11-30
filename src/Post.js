@@ -4,9 +4,6 @@ import { PrismicRichText, useSinglePrismicDocument } from "@prismicio/react";
 
 function Post() {
   const [document] = useSinglePrismicDocument("post");
-  console.log("post", document);
-
-  // console.log("here", document)  alt={document.data.profile[0].profile_image.alt}
 
   return (
     <>
