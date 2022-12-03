@@ -9,11 +9,11 @@ import { useSinglePrismicDocument } from "@prismicio/react";
 
 function App() {
   const [menu] = useSinglePrismicDocument("menu");
-  
+
   return (
     <>
       <BrowserRouter>
-      <Header menuDoc={menu} />
+        <Header menuDoc={menu} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/preview" element={<Preview />} />
