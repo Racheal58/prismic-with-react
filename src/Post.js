@@ -1,12 +1,16 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
-import { PrismicRichText, useSinglePrismicDocument } from "@prismicio/react";
+import { PrismicRichText, usePrismicDocumentByUID } from "@prismicio/react";
 
 function Post() {
-  const [document] = useSinglePrismicDocument("post");
+  const { uid } = useParams();
+
+  const [document] = usePrismicDocumentByUID("post", uid);
 
   return (
     <>
+      <p>{uid}</p>
       {document && (
         <div>
           <PrismicRichText field={document.data.page_title} />
