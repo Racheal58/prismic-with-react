@@ -6,6 +6,7 @@ import Home from "./Home";
 import Preview from "./Preview";
 import { Header } from "./Header";
 import { useSinglePrismicDocument } from "@prismicio/react";
+import { Footer } from "./Footer";
 
 function App() {
   const [menu] = useSinglePrismicDocument("menu");
@@ -19,6 +20,7 @@ function App() {
           <Route path="/preview" element={<Preview />} />
           <Route path="/:uid" element={<Post />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
